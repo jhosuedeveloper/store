@@ -1,0 +1,12 @@
+<ul>
+<li>
+<%=@category.name %>
+</li>
+<li>
+<img src=" <%= @category.photo_url%> " alt="stuff" height="200" width="200">
+</li>
+<li>
+<%=@category.description %>
+</li>
+</ul>
+<%=link_to "EDIT CATEGORY", edit_category_path(@category) %>

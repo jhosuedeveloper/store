@@ -1,0 +1,12 @@
+
+<ul class = "categories_nav">
+<% @categories.each do |category| %>
+
+<li>
+<%=link_to category.name, category_products_path(category)%>
+</li>
+<%end%>
+</ul>
+
+
+<%= link_to "CREATE A NEW CATEGORY", new_category_path %>

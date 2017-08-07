@@ -1,0 +1,12 @@
+
+<h3> <%= @category.name %> CATEGORY : </h3>
+<ul>
+<%@products.each do |product| %>
+<li>
+<%=link_to product.name , category_product_path(@category, product) %>
+</li>
+<% end %>
+</ul>
+
+
+<h2><%=link_to "CREATE A NEW PRODUCT", new_category_product_path(@category) %></h2>

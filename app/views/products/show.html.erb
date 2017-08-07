@@ -1,0 +1,17 @@
+<ul>
+<li>
+<%=@product.name%>
+</li>
+<li>
+<%=@product.price %>
+</li>
+<li>
+<%=@product.color %>
+</li>
+<li>
+<img src = "<%=@product.photo_url%> ">
+</li>
+</ul>
+
+
+<h2> <%=link_to "EDIT", edit_category_product_path(@category, @product) %>
