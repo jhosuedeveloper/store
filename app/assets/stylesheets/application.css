@@ -14,9 +14,47 @@
  *= require_self
  */
 
+
+
+.header a
+{
+  color: black;
+  text-decoration: none;
+  font-family: 'Raleway', sans-serif;
+  font-size: 5em;
+
+}
+
+
 .categories_nav
 {
 display: flex;
-flex-direction: column;
+background: black;
+border-radius: 23px;
+list-style-type: none;
 
+}
+
+.categories_nav li
+{
+margin: 2em;
+color: white;
+
+}
+
+
+
+.categories_nav li a
+{
+color: white;
+text-decoration: none;
+font-family: 'Montserrat', sans-serif;
+font-size: 22px;
+text-transform: uppercase;
+}
+
+
+body{
+margin: 42px;
+background: #A4EEFF;
 }

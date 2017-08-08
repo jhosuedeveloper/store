@@ -4,7 +4,10 @@
 <%@products.each do |product| %>
 <li>
 <%=link_to product.name , category_product_path(@category, product) %>
+
+<img src="<%=(product.photo_url) %>" >
 </li>
+
 <% end %>
 </ul>
 

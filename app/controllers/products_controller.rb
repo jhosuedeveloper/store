@@ -28,7 +28,7 @@ class ProductsController < ApplicationController
   def create
   @category =  Category.find(params[:category_id])
   @product = @category.products.create!(passing_info)
-  redirect_to category_product_path(@category, @product)
+  redirect_to category_product_path(@category, @product), notice: "#{@product.name} was created in the #{@category.name} category"
   end
 
 

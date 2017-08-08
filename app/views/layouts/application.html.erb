@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+  <link href="https://fonts.googleapis.com/css?family=Hind|Lobster|Montserrat|Raleway|Sedgwick+Ave" rel="stylesheet">
     <title>Store</title>
     <%= csrf_meta_tags %>
 
@@ -9,7 +10,16 @@
   </head>
 
   <body>
-    <h1><%=link_to "HOME", categories_path %> </h1>
+
+    <div class="header"> <%=link_to "PARALLEX PARTS", categories_path %> </div>
+
+    <% flash.each do |type, message| %>
+      <p class="flash <%= type %>"><%= message %></p>
+    <% end %>
+
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+
     <%= yield %>
   </body>
 </html>
