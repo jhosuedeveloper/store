@@ -4,8 +4,18 @@ Rails.application.routes.draw do
 root to: 'categories#index'
 
 resources :categories do
-  resources :products
+  resources :products do
+
+
+    member do
+      post "add_to_cart"
+      get "show_products_in_cart"
+    end
+
+
+  end
 end
+
 
 
 

@@ -58,14 +58,24 @@ class ProductsController < ApplicationController
   redirect_to category_products_path(@category)
   end
 
+  # ----------------------------
+  # ----------------------------
 
+  def add_to_cart
+  @product = Product.find(params[:id])
+  current_user.cart.product_in_carts.create(product: @product)
+  redirect_to root_path
+  end
 
-
+  def show_products_in_cart
+  @products = current_user.cart.products
+  end
 private
 
 def passing_info
 params.require(:product).permit(:name, :price, :photo_url, :color)
 end
+
 
 
 

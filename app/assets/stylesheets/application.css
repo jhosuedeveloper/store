@@ -18,20 +18,24 @@
 
 .header a
 {
-  color: black;
+  color: white;
   text-decoration: none;
-  font-family: 'Raleway', sans-serif;
-  font-size: 5em;
+  font-family: 'Fredoka One', cursive;
+  font-size: 50px;
+  margin: 0;
+
 
 }
 
 
 .categories_nav
 {
-display: flex;
+  display: flex;
+  justify-content: center;
 background: black;
 border-radius: 23px;
 list-style-type: none;
+background-color: rgba(0, 0, 0, 0.0);
 
 }
 
@@ -56,5 +60,60 @@ text-transform: uppercase;
 
 body{
 margin: 42px;
-background: #A4EEFF;
+background-image: url("http://www.freehdimages.in/uploads/large/desktop-apple-ios-wallpaper-hd.jpg");
+
+}
+
+.header_title{
+display: flex;
+justify-content: space-between;
+}
+
+.user-info{
+margin-top: 10px;
+
+}
+
+.login{
+border-radius: 30px;
+background: white;
+padding: 10px 30px;
+/*margin: 30px;
+margin-right: 30px;*/
+/*margin-bottom: 0px;*/
+border-color: white;
+font-family: 'Raleway', sans-serif;
+text-decoration: none;
+border-style: solid;
+color: white;
+background-color: rgba(0, 0, 0, 0.0);
+}
+
+
+.signup{
+  border-radius: 30px;
+  background: white;
+  padding: 10px 30px;
+  margin-right: 10px;
+  border-color: white;
+  font-family: 'Raleway', sans-serif;
+  text-decoration: none;
+  border-style: solid;
+  color: white;
+
+  background-color: rgba(0, 0, 0, 0.0);
+}
+
+.logout{
+  border-radius: 30px;
+  background: white;
+  padding: 10px 30px;
+  margin-right: 10px;
+  border-color: white;
+  font-family: 'Raleway', sans-serif;
+  text-decoration: none;
+  border-style: solid;
+  color: white;
+
+  background-color: rgba(0, 0, 0, 0.0);
 }

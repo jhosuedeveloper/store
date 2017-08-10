@@ -1,0 +1,9 @@
+
+<h2> YOUR CART  <%=current_user.email %> </h2>
+<ul>
+<%@products.each do |product| %>
+<li>
+<%=product.name%>
+</li>
+<%end %>
+</ul>
