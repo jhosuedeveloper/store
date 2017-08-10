@@ -161,7 +161,8 @@ color: white;
 }
 
 main{
-margin: 750px 50px;
+
+display: flex;
 }
 
 .notice{
@@ -238,4 +239,98 @@ font-family: 'Ubuntu', sans-serif;
 
 .imge{
 border-radius: 20px;
+margin: 0px;
+display: flex;
+}
+
+
+.img1{
+margin: 100px 100px;
+
+}
+.img2{
+margin: 100px 100px;
+
+}
+
+.cart{
+display: flex;
+flex-direction: column;
+margin: 10px 0px;
+background: white;
+}
+
+.product_container{
+  display: flex;
+  justify-content: space-between;
+  background: white;
+  margin: 0px 300px;
+  border-style: solid;
+  border-color: grey;
+  padding: 10px;
+
+}
+
+.listx{
+font-family: 'Ubuntu', sans-serif;
+font-size: 17pt;
+color: #18A6F1;
+}
+
+.pricex{
+font-family: 'Ubuntu', sans-serif;
+color: #E3055B;
+font-size: 17pt;
+
+}
+
+
+
+
+
+.product_containerx{
+  display: flex;
+  justify-content: space-between;
+  background: black;
+  margin: 0px 300px;
+  border-style: solid;
+  border-color: grey;
+  padding: 10px;
+
+
+}
+.listxx{
+font-family: 'Ubuntu', sans-serif;
+font-size: 17pt;
+/*color: #18A6F1;*/
+color: white;
+
+}
+
+.pricexx{
+font-family: 'Ubuntu', sans-serif;
+/*color: #E3055B;*/
+color: white;
+font-size: 17pt;
+
+}
+
+
+.checkout{
+background: #E3051B;
+font-family: 'Ubuntu', sans-serif;
+color: white;
+font-size: 17pt;
+height: 70px;
+width: 400px;
+text-align: center;
+vertical-align: middle;
+padding-top: 47px;
+margin: 100px;
+}
+
+.outer{
+display: flex;
+justify-content: flex-end;
+
 }

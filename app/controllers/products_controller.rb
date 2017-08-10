@@ -64,7 +64,8 @@ class ProductsController < ApplicationController
   def add_to_cart
   @product = Product.find(params[:id])
   current_user.cart.product_in_carts.create(product: @product)
-  redirect_to root_path
+
+  redirect_to category_products_path(@product.category), notice: "#{@product.name} was added to yoru cart"
   end
 
   def show_products_in_cart

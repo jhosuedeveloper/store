@@ -17,6 +17,7 @@ resources :categories do
 end
 
 
+resources :carts
 
 
 

@@ -1,0 +1,57 @@
+<div class="cart" >
+<br>
+<br>
+<%total =0 %>
+<div class="product_containerx">
+
+<div class="listxx">
+  PRODUCT NAME
+</div>
+
+<div class="pricexx">
+PRICE
+</div>
+
+</div>
+
+<%@cart.products.each do |product|%>
+
+<div class="product_container">
+
+<div class="listx">
+<%=product.name + product.color%>
+</div>
+
+<div class="pricex">
+$ <%=product.price%>
+  <%total+=product.price %>
+</div>
+
+
+
+</div>
+<%end%>
+<div>
+
+
+
+  <div class="product_containerx">
+
+  <div class="listxx">
+  Total Cost
+  </div>
+
+  <div class="pricexx">
+  $ <%=total%>
+  </div>
+
+
+  </div>
+
+<br>
+
+<div class="outer">
+<div class = "checkout">
+CHECKOUT
+</div>
+</div>
