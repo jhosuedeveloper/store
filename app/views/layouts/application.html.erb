@@ -1,49 +1,86 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
   <link href="https://fonts.googleapis.com/css?family=Hind|Lobster|Montserrat|Raleway|Sedgwick+Ave" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
-    <title>Store</title>
-    <%= csrf_meta_tags %>
+  <link href="https://fonts.googleapis.com/css?family=Comfortaa|Fredoka+One|Rajdhani|Ubuntu|Ubuntu+Mono" rel="stylesheet">
+  <title>Store</title>
+  <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
 
-  <body>
+<body>
 
 
 
   <div class="header_title">
 
 
-    <div class="header"> <%=link_to "PARALLEX", categories_path %> </div>
+    <div class="header"> <br> <%=link_to "PARALLEX", categories_path %> </div>
+
+    <div>
+    <%@categories = Category.all %>
+    <ul class = "categories_nav">
+    <% @categories.each do |category| %>
+
+    <li>
+    <%=link_to category.name, category_products_path(category)%>
+    </li>
+    <%end%>
+    </ul>
 
 
 
+    </div>
+
+    <div class=picutre>
+      <br>
+      <br>
+      <img class="imge", src="https://ak2.picdn.net/shutterstock/videos/16237198/thumb/1.jpg", height= "50" weidth: "50">
+    </div>
 
     <div class="user-info">
       <% if current_user %>
-        Welcome, <%= current_user.email %>
-        <%= link_to 'Signout', destroy_user_session_path, :method => :delete, class:"signout" %>
+      <p class="welcome">  Welcome, <%= current_user.email %> </p>
+      <%= link_to 'Signout', destroy_user_session_path, :method => :delete, class:"signout" %>
       <% else %>
-        <%= link_to 'Signup', new_user_registration_path, class:"signup" %>
-        <%= link_to 'Login', new_user_session_path , class:"login"%>
+      <%= link_to 'Signup', new_user_registration_path, class:"signup" %>
+      <%= link_to 'Login', new_user_session_path , class:"login"%>
       <% end %>
     </div>
 
 
   </div>
+  <hr>
 
 
+  <!-- <% flash.each do |type, message| %>
+  <p class="flash <%= type %>"><%= message %></p>
+  <% end %> -->
 
-    <!-- <% flash.each do |type, message| %>
-      <p class="flash <%= type %>"><%= message %></p>
-    <% end %> -->
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
 
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+  <%= yield %>
 
-    <%= yield %>
-  </body>
+<main>
+
+</main>
+
+
+  <footer>
+    <hr>
+  <div class="container">
+    <p class= "paragraph"> Help &amp; Contact </p>
+    <p class= "paragraph">  Fees</p>
+    <p class= "paragraph">  Security</p>
+    <p class= "paragraph">  Apps </p>
+    <p class= "paragraph">  Shop </p>
+
+  </div>
+  <hr>
+  </footer>
+</body>
 </html>

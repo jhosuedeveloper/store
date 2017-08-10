@@ -22,7 +22,13 @@
   text-decoration: none;
   font-family: 'Fredoka One', cursive;
   font-size: 50px;
-  margin: 0;
+
+  padding-top: 20px;
+
+  margin: 0px;
+  border: 0px;
+
+  border-style: solid;
 
 
 }
@@ -36,6 +42,7 @@ background: black;
 border-radius: 23px;
 list-style-type: none;
 background-color: rgba(0, 0, 0, 0.0);
+
 
 }
 
@@ -52,21 +59,29 @@ color: white;
 {
 color: white;
 text-decoration: none;
-font-family: 'Montserrat', sans-serif;
-font-size: 22px;
-text-transform: uppercase;
+/*font-family: 'Montserrat', sans-serif;*/
+font-family: 'Comfortaa', cursive;
+/*font-family: 'Rajdhani', sans-serif;*/
+font-size: 27px;
+/*text-transform: uppercase;*/
 }
 
-
+.welcome{
+font-family: 'Rajdhani', sans-serif;
+color: white;
+padding-bottom: 10px;
+}
 body{
-margin: 42px;
+margin: 0px;
 background-image: url("http://www.freehdimages.in/uploads/large/desktop-apple-ios-wallpaper-hd.jpg");
+
 
 }
 
 .header_title{
 display: flex;
 justify-content: space-between;
+margin: 42px
 }
 
 .user-info{
@@ -104,7 +119,7 @@ background-color: rgba(0, 0, 0, 0.0);
   background-color: rgba(0, 0, 0, 0.0);
 }
 
-.logout{
+.signout{
   border-radius: 30px;
   background: white;
   padding: 10px 30px;
@@ -116,4 +131,111 @@ background-color: rgba(0, 0, 0, 0.0);
   color: white;
 
   background-color: rgba(0, 0, 0, 0.0);
+}
+
+.container{
+display: flex;
+margin: 10px;
+}
+
+.paragraph{
+margin: 30px;
+color: white;
+  font-family: 'Raleway', sans-serif;
+}
+
+.categoryx{
+  color: white;
+  font-family: 'Raleway', sans-serif;
+  text-decoration: none;
+  border-radius: 30px;
+  background: white;
+  padding: 10px 10px;
+  margin: 10px;
+  border-color: white;
+  font-family: 'Raleway', sans-serif;
+  border-style: solid;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.0);
+
+}
+
+main{
+margin: 750px 50px;
+}
+
+.notice{
+color: white;
+}
+.alert{
+color: red;
+}
+
+.product_index{
+background-color: white;
+margin: 0 0px;
+}
+
+.product_index{
+display: flex;
+flex-wrap: wrap;
+
+}
+
+.item{
+margin: 60px;
+
+}
+
+.phone_model{
+border: 0px;
+margin: 0px;
+border-style: solid;
+border-color: black;
+
+text-align: center;
+text-decoration: none;
+color: #18A6F1;
+font-family: 'Ubuntu', sans-serif;
+}
+
+.phone_price{
+color: #E3055B;
+text-align: center;
+font-family: 'Ubuntu', sans-serif;
+}
+
+.button{
+border-radius: 10px;
+background: #18A6F1;
+font-family: 'Ubuntu', sans-serif;
+color: white;
+padding: 10px;
+text-decoration: none;
+text-align: center;
+}
+
+.category_header{
+color: white;
+text-align: center;
+text-decoration: none;
+font-family: 'Ubuntu', sans-serif;
+}
+
+.new_product{
+  border-radius: 30px;
+  background: #18A6F1;
+  font-family: 'Ubuntu', sans-serif;
+  color: white;
+  padding: 10px;
+  text-decoration: none;
+  text-align: center;
+  padding: 30px;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 40px;
+
+}
+
+.imge{
+border-radius: 20px;
 }

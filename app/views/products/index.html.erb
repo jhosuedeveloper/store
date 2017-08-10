@@ -1,15 +1,24 @@
 
-<h3> <%= @category.name %> CATEGORY : </h3>
-<ul>
+
+<h3 class="category_header"> <%= @category.name %> CATEGORY : </h3>
+
+<div class="product_index">
 <%@products.each do |product| %>
-<li>
-<%=link_to product.name , category_product_path(@category, product) %>
-
+<div class=item>
 <img src="<%=(product.photo_url) %>" >
-</li>
-
+<br>
+<br>
+<div class="phone_model"><%=link_to product.name + " "+product.color, category_product_path(@category, product), class:"phone_model" %></div>
+<br>
+<div class= "phone_price">$ <%=product.price%></div>
+<br>
+<div class="button"> <%= link_to "ADD TO CART", add_to_cart_category_product_path(@category, product), method: :post, class: "button" %></div>
+</div>
 <% end %>
-</ul>
 
 
-<h2><%=link_to "CREATE A NEW PRODUCT", new_category_product_path(@category) %></h2>
+
+
+</div>
+
+<div class = "new_product"><%=link_to "CREATE A NEW PRODUCT", new_category_product_path(@category), class: "new_product" %></div>
