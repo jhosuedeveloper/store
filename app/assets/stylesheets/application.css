@@ -334,3 +334,23 @@ display: flex;
 justify-content: flex-end;
 
 }
+
+/*Overall, good semantic naming. With that said, some of them are hard to distinguish
+from one another (.pricex vs .pricexx). Consider looking into a css naming methodology.
+One of the most popular is BEM: http://getbem.com/naming/
+
+Secondly, really focus on being 100% with how you format your code. Either always
+use:
+
+.class-name {
+
+}
+
+^ more common
+
+or
+
+.class-name
+{
+
+}*/

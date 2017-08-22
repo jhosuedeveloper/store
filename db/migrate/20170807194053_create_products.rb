@@ -6,6 +6,7 @@ class CreateProducts < ActiveRecord::Migration[5.1]
       t.string :color
       t.string  :photo_url
       t.references :category
+      # consider using the `foreign_key: true` constraint on your references
     end
   end
 end

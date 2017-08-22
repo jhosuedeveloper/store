@@ -1,4 +1,7 @@
 class ProductsController < ApplicationController
+  # perhaps consider forcing user authentication for methods other than index and show
+  # ex:
+  # before_action :authenticate_user!, except: [:index, :show]
 
   def index
    @category = Category.find(params[:category_id])
@@ -60,6 +63,8 @@ class ProductsController < ApplicationController
 
   # ----------------------------
   # ----------------------------
+  # For the two cart methods below, you MUST force authentication. Currently, it throws
+  # and error when I click on the cart link without being signed in.
 
   def add_to_cart
   @product = Product.find(params[:id])

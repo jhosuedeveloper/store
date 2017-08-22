@@ -9,6 +9,9 @@
 Category.destroy_all
 Product.destroy_all
 
+# Instead of using `x` and `y` for placeholder variables, consider being more semantic.
+# Perhaps use `c` and `p` instead (as shorthands for their models)
+
 x1 = Category.create(name: "Iphone", photo_url: "", description: "")
 x2 = Category.create(name: "Ipod", photo_url: "", description: "")
 x3 = Category.create(name: "Ipad", photo_url: "", description: "")

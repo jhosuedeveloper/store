@@ -4,10 +4,11 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  has_one :cart
+  has_one :cart, dependent: :destroy
 
   after_create do
     Cart.create(user: self)
   end
+  # Great job using an ActiveRecord callback!!
 
 end
