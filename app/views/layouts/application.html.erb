@@ -27,6 +27,8 @@
 
     <li>
     <%=link_to category.name, category_products_path(category)%>
+    <%# While this works and is acceptable, more commonly you would link to the category's
+    show page (category_path(category)) %>
     </li>
     <%end%>
     </ul>
@@ -36,6 +38,8 @@
     </div>
 
     <div class=picutre>
+    <%# <div class="picture">
+    Always use double quotations in HTML %>
       <br>
       <br>
       <a href="/carts"><img class="imge", src="https://ak2.picdn.net/shutterstock/videos/16237198/thumb/1.jpg", height= "50" weidth: "50"></a>
@@ -59,6 +63,7 @@
   <!-- <% flash.each do |type, message| %>
   <p class="flash <%= type %>"><%= message %></p>
   <% end %> -->
+  <%# When commenting out code in ERB, always use this syntax %>
 
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
@@ -68,8 +73,12 @@
 <main>
 <br>
 <br>
+<%# Consider downloading the images below, storing them in assets, and using `asset_path`
+or `image_path` to reference them here. That way, you don't have to rely on mobilesentrix's
+domain keeping those images available for your site to work %>
 <img  class = "img1", src="https://www.mobilesentrix.com/skin/frontend/cellz2/wholesale/images/sprites/lifetime%20warranty-banner.jpg">
 <img  class = "img2", src="https://www.mobilesentrix.com/skin/frontend/cellz2/wholesale/images/sprites/broken-lcd-banner.jpg">
+<%# No spaces around `=` in HTML %>
 </main>
 
 

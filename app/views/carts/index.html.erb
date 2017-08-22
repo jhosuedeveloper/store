@@ -1,44 +1,50 @@
 <div class="cart" >
+<%# Try to stay away from using <br /> to create styling effects. Instead,
+use CSS styling (display block, padding, margin, etc.)%>
 <br>
 <br>
 <%total =0 %>
+<%# While this is functional, try to do any computation / logic in the controller.
+So for the "total", perhaps define an @total in the controller, calculcate the
+total usings .each / .reduce, and then pass it into the view %>
 <div class="product_containerx">
 
-<div class="listxx">
-  PRODUCT NAME
-</div>
+  <div class="listxx">
+    PRODUCT NAME
+  </div>
 
-<div class="pricexx">
-PRICE
-</div>
+  <div class="pricexx">
+    PRICE
+  </div>
 
 </div>
 
 <%@cart.products.each do |product|%>
 
-<div class="product_container">
+  <div class="product_container">
 
-<div class="listx">
-<%=product.name + product.color%>
-</div>
+    <div class="listx">
+      <%=product.name + product.color%>
+    </div>
 
-<div class="pricex">
-$ <%=product.price%>
-  <%total+=product.price %>
-</div>
+    <div class="pricex">
+      $ <%=product.price%>
+      <%total+=product.price %>
+    </div>
 
-
-
-</div>
+  </div>
 <%end%>
 <div>
+<%# I think the div tag above is extra / unneccessary. Really try to focus on writing
+your HTML with consistent and appropriate indendations and line spacing. It makes
+it easier to catch excess / floating elements like the one above. %>
 
 
 
   <div class="product_containerx">
 
   <div class="listxx">
-  Total Cost
+    Total Cost
   </div>
 
   <div class="pricexx">
@@ -51,7 +57,7 @@ $ <%=product.price%>
 <br>
 
 <div class="outer">
-<div class = "checkout">
-CHECKOUT
-</div>
+  <div class = "checkout">
+    CHECKOUT
+  </div>
 </div>

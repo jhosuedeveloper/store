@@ -54,6 +54,10 @@ class CategoriesController < ApplicationController
 
 private
 
+# Consider updating the name of your params sanitizization method below to something more
+# semantic. The convention in Rails here would be to use either `category_params`
+# or `strong_params.`
+
 def passing_info
 
 params.require(:category).permit(:name, :photo_url, :description)
