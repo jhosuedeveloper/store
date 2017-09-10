@@ -9,6 +9,7 @@ resources :categories do
 
     member do
       post "add_to_cart"
+      delete "remove_from_cart"
       get "show_products_in_cart"
     end
 

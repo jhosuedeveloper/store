@@ -65,11 +65,33 @@ class ProductsController < ApplicationController
   @product = Product.find(params[:id])
   current_user.cart.product_in_carts.create(product: @product)
 
-  redirect_to category_products_path(@product.category), notice: "#{@product.name} was added to yoru cart"
+  redirect_to category_products_path(@product.category), notice: "#{@product.name} was added to your cart"
   end
 
+
+
+
+
+
+  def remove_from_cart
+
+    @product = Product.find(params[:id])
+
+
+
+  current_user.cart.product_in_carts.find_by(product_id: params[:id]).destroy
+    redirect_to category_products_path(@product.category), notice: "#{@product.name} was removed to your cart"
+  end
+
+
+
+
+
+
+
+
   def show_products_in_cart
-  @products = current_user.cart.products
+    @products = current_user.cart.products
   end
 private
 

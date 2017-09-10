@@ -1,24 +1,42 @@
-# README
+# PARALLEX STORE (store)
+Parallex is an online store for mobile electronic parts.
+All files are included in this repository for the parallex store application.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+#TECHNOLOGIES USED
+-Ruby on Rails
+-HTML & CSS
+-PostgreSQL
 
-Things you may want to cover:
 
-* Ruby version
+#CURRENT FEATURES:
+-Users have full crud on products, categories within their carts as well as independently
+-users can add products to their carts
+-users can delete items on their carts
+-users's cart shows the total cost of items on the cart
+-users accounts keeps track of items on their respective cars once they are logged out.
 
-* System dependencies
 
-* Configuration
 
-* Database creation
 
-* Database initialization
+#INSTALLATION INSTRUCTIONS
+In order to set it up locally:
+-fork and clone
+- run the following commands
+```
+bundle install
+rails db:drop
+rails db:create
+rails db:migrate
+rails db:seed
 
-* How to run the test suite
+rails s
 
-* Services (job queues, cache servers, search engines, etc.)
+```
+follow the instructions from the output on the terminal
+and access the url localhost given.
 
-* Deployment instructions
 
-* ...
+
+#APPROACHES TAKEN
+ERDs for parallex is on the planning folder in the root directory.
+it includes details for the MVP, silver and gold levels that were used for planning of this project.

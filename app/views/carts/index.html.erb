@@ -23,6 +23,7 @@ PRICE
 </div>
 
 <div class="pricex">
+<h2> <%= link_to "DELETE", remove_from_cart_category_product_path(product.category, product), method: :delete %></h2>
 $ <%=product.price%>
   <%total+=product.price %>
 </div>
