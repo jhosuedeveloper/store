@@ -13,7 +13,7 @@ All files are included in this repository for the parallex store application.
 - users can add products to their carts
 - users can delete items on their carts
 - users's cart shows the total cost of items on the cart
-- users accounts keeps track of items on their respective cars once they are logged out.
+- users accounts keeps track of items on their respective carts once they are logged out.
 
 
 
@@ -39,5 +39,5 @@ and access the url localhost given.
 
 
 ## APPROACHES TAKEN
-ERDs for parallex is on the planning folder in the root directory.
+The ERD for parallex is on the planning folder in the root directory of this repository.
 it includes details for the MVP, silver and gold levels that were used for planning of this project.
