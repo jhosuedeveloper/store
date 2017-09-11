@@ -21,7 +21,8 @@ All files are included in this repository for the parallex store application.
 #INSTALLATION INSTRUCTIONS
 In order to set it up locally:
 -fork and clone
-- run the following commands
+-run the following commands
+
 ```
 bundle install
 rails db:drop
